@@ -13,7 +13,7 @@ Expanding on the lessons learned from class, and attempting to push further...
 1. Setup venv
 2. `pip install discord.py`
 3. install django
-4. create a file `token.json`
+4. create a file `token.json` in the same directory as this file
 5. `{
 "TOKEN": "put your token here",
 "PREFIX": "!"
