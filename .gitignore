@@ -1,0 +1,7 @@
+/db.sqlite3
+/.idea
+/token.json
+/cogs/__pycache__/
+/discord_app/__pycache__/
+/discord_app/migrations/__pycache__/
+/djangoDiscord/__pycache__/
