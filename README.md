@@ -21,5 +21,13 @@ Expanding on the lessons learned from class, and attempting to push further...
 6. You can change the prefix to whatever you'd like.
 
 ### Project Notes
-Cogs can be used to extend the bot in specific ways like creating a specific set of commands.
+*Cogs can be used to extend the bot in specific ways like creating a specific set of commands.
 refer to `cogs/ExampleHandler.py`
+
+Commands must be unique throughout all the cogs.
+
+Test commands have been added showing examples of similar concepts from class.
+We can use this as a baseline to expand on.
+
+# TODO
+1. Create a TODO list
