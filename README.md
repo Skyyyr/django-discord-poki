@@ -29,5 +29,14 @@ Commands must be unique throughout all the cogs.
 Test commands have been added showing examples of similar concepts from class.
 We can use this as a baseline to expand on.
 
+!help will display all the details about the bot (if you changed the prefix use that instead)
+
+Use url routes for situations when the user wants to access:
+1. poke bank of stored pokemon
+2. item bank
+3. poke market (buying/selling)
+4. poke center ?
+5. poke encounters ?
+
 # TODO
 1. Create a TODO list

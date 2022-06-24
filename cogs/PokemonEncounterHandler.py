@@ -52,7 +52,12 @@ class PokemonEncounter(commands.Cog):
 
         # Pull the image url out
         image = responseJSON['sprites']['front_default']
+        pokemon_name = responseJSON['species']['name']
 
+        output = f'You found a random {pokemon_name}!'
+        # Send the text output first
+        await ctx.send(output)
+        # We send the image separately due to the URL being displayed when used in a string. (visual bug)
         await ctx.send(image)
 
 
