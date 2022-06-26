@@ -1,0 +1,16 @@
+[
+    {
+        "trainer_id": 1,
+        "trainer_name": "Test First Trainer",
+        "trainer_pokedex": [],
+        "trainer_inventory": [],
+        "trainer_current_pokemon": 1
+    },
+    {
+        "trainer_id": 2,
+        "trainer_name": "Alfred",
+        "trainer_pokedex": [],
+        "trainer_inventory": [],
+        "trainer_current_pokemon": 1
+    }
+]

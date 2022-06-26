@@ -38,5 +38,9 @@ Use url routes for situations when the user wants to access:
 4. poke center ?
 5. poke encounters ?
 
+
+### Should the 'game' be mostly handled by discord, or a url page?
+Will need to expand on using pages - and using the discord api to reference your status?
+
 # TODO
 1. Create a TODO list

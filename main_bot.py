@@ -1,6 +1,9 @@
 import json
 import os
+
 from discord.ext import commands
+
+from my_classes.pokemon_trainer import PokemonTrainer
 
 """
     This is our base file for our bot
@@ -39,6 +42,7 @@ async def on_ready():
     print(f"we have logged in as {client}")
     # We load any cogs
     load_extensions()
+    load_trainers()
 
 
 @client.event
@@ -63,6 +67,11 @@ async def on_message(message):
     await client.process_commands(message)
 
 
+@client.event
+async def on_reaction_add(reaction, user):
+    await reaction.message.channel.send(f'{user} reacted with {reaction.emoji}')
+
+
 @client.command()
 async def load(ctx, cog_handler):
     """Manually load a cog"""
@@ -84,6 +93,20 @@ def load_extensions():
         if filename.endswith('.py'):
             # cut off the .py
             client.load_extension(f'cogs.{filename[:-3]}')
+
+
+def load_trainers():
+    cur_path = os.path.abspath(os.path.dirname(__file__))
+    trainer_path = os.path.join(cur_path, "data/trainers/pokemon_trainers.json")
+
+    loaded_trainers = []
+    with open(trainer_path) as data_file:
+        reader = json.load(data_file)
+        for row in reader:
+            trainer = PokemonTrainer(**row)
+            loaded_trainers.append(trainer)
+    PokemonTrainer.all_trainers.append(loaded_trainers)
+    # print(len(PokemonTrainer.all_trainers[0]))
 
 
 # Keep this at the bottom - it is the direct link to the bot to turn it online
